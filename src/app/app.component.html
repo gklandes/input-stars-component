@@ -1,0 +1,8 @@
+<form name="myForm" id="myForm" [formGroup]="myForm">
+  <input-stars formControlName="myStars"
+    [max]="5"
+    ></input-stars> {{ myForm.get('myStars').value }}
+  <input-stars formControlName="yourStars"
+    [max]="10"
+    ></input-stars> {{ myForm.get('yourStars').value }}
+</form>
