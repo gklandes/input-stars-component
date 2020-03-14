@@ -1,8 +1,35 @@
-<form name="myForm" id="myForm" [formGroup]="myForm">
-  <input-stars formControlName="myStars"
+<div class="page">
+  <h1><span>Input-Stars</span> Component</h1>
+
+  <p>A simple Angular Reactive Form element for capturing ratings. The element uses the same conventions as other form elements like "input" to build up a rich form experience.</p>
+
+  <h2>Usage</h2>
+  <form name="myForm" id="myForm" [formGroup]="myForm">
+    <p>Add a rating element to your form:</p>
+
+    <h3>Component</h3>
+    <pre ngNonBindable>
+this.myForm = this.fb.group(&#123; myStars: [0] &#125;)</pre>
+
+    <h3>Template</h3>
+    <pre ngNonBindable>
+&lt;form name="myForm" id="myForm" [formGroup]="myForm"&gt;
+  &lt;p&gt;Rate It!&lt;/p&gt;
+  &lt;input-stars formControlName="myStars"
     [max]="5"
-    ></input-stars> {{ myForm.get('myStars').value }}
-  <input-stars formControlName="yourStars"
-    [max]="10"
-    ></input-stars> {{ myForm.get('yourStars').value }}
-</form>
+    &gt;&lt;/input-stars&gt;
+  &lt;p&gt;You've given it a {{ myForm.get('myStars').value }}!&lt;br&gt;
+  The rating is {{ myForm.get('myStars').pristine ? 'untouched' : 'touched' }}&lt;/p&gt;
+&lt;/form&gt;</pre>
+
+    <h3>Demo</h3>
+    <div class="example">
+      <p>Rate It!</p>
+      <input-stars formControlName="myStars"
+        [max]="5"
+        ></input-stars>
+      <p>You've given it {{ myForm.get('myStars').value }} stars!<br>
+      The rating is {{ myForm.get('myStars').pristine ? 'untouched' : 'touched' }}.</p>
+    </div>
+  </form>
+</div>
