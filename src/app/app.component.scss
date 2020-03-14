@@ -1,3 +1,42 @@
-p {
-  font-family: Lato;
+@import "../variables";
+
+.page {
+  background: $white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+ color: $color2;
+ margin: 0;
+
+ span { color: $color4; }
+}
+
+h2 {
+  color: $color4;
+}
+
+h3 {
+  color: $color2;
+}
+
+h2, h3 { margin: 1rem 0; }
+
+p { margin: 0 0 1rem; }
+p:last-child { margin: 0; }
+
+pre, .example {
+  background: $color2;
+  border: 1px solid $color4;
+  border-radius: .5rem;
+  color: $white;
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+.example {
+  background: $color3;
+  color: $color2;
+  white-space: normal;
 }

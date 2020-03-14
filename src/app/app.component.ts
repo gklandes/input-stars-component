@@ -16,8 +16,7 @@ export class AppComponent implements OnInit  {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      myStars: [1],
-      yourStars: [4],
+      myStars: [0]
     })
   }
 }
