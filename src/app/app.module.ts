@@ -11,4 +11,4 @@ import { InputStarsComponent } from './input-stars.component';
   declarations: [ AppComponent, InputStarsComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}

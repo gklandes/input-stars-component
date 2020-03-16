@@ -16,7 +16,14 @@ export class AppComponent implements OnInit  {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      myStars: [0]
-    })
+      myStars: [null, [ Validators.required ]]
+    });
+  }
+
+  reset() {
+    const ctrl = this.myForm.get('myStars');
+    ctrl.setValue(null);
+    ctrl.markAsPristine();
+    ctrl.updateValueAndValidity();
   }
 }
