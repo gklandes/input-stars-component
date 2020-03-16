@@ -41,7 +41,6 @@ export class InputStarsComponent implements OnInit, ControlValueAccessor {
 
   ngOnInit() {
     this.maxValue = parseInt(this.max);
-    console.log(this.maxValue, this.max)
     if (this.maxValue && this.maxValue > 0) this.stars = new Array(parseInt(this.max));
     else throw new Error('"app-input-stars" requires [max] be a positive, non-zero integer');
   }
