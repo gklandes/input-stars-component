@@ -7,7 +7,6 @@ import { FormBuilder, FormGroup, Validators, ValidatorFn, ValidationErrors, Form
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent implements OnInit  {
-  name: string = 'Angular';
   myForm: FormGroup;
 
   constructor(
