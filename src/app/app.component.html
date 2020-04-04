@@ -23,12 +23,10 @@ this.myForm = this.formBuilder.group(&#123; myStars: [null, [ Validators.require
       <input-stars formControlName="myStars"
         [max]="5"
         ></input-stars>
-      <p>You've given it {{ myForm.get('myStars').value || 'no' }} stars!</p>
+      <p class="example__output">You've given it {{ myForm.get('myStars').value || 'no' }} stars!</p>
     </div>
   </form>
-  <p>The rating is <strong>{{ myForm.get('myStars').pristine ? 'untouched' : 'touched' }}</strong>.<br>
-  The field is <strong>{{ myForm.get('myStars').valid ? 'valid' : 'invalid' }}</strong>; errors: <code>{{ myForm.get('myStars').errors | json}}</code></p>
-  
-
+  <p>The rating is <strong class="example__pristine">{{ myForm.get('myStars').pristine ? 'untouched' : 'touched' }}</strong>.<br>
+  The field is <strong class="example__valid">{{ myForm.get('myStars').valid ? 'valid' : 'invalid' }}</strong>; errors: <code>{{ myForm.get('myStars').errors | json}}</code></p>
   <p><button (click)="reset()">Reset Demo</button></p>
 </div>

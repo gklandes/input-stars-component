@@ -1,17 +1,25 @@
 import { AppComponent } from './app.component';
-import { FormBuilder } from "@angular/forms";
-import { TestBed } from "@angular/core/testing";
+import { FormBuilder, FormGroupDirective } from "@angular/forms";
+import { TestBed, ComponentFixture } from "@angular/core/testing";
+import { InputStarsComponent } from './input-stars.component';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 
-describe('AppComponent', () => {
-  let comp;
+describe('The "AppComponent"', () => {
+  let comp: AppComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      declarations: [
+        AppComponent,
+        FormGroupDirective,
+        InputStarsComponent,
+        FaIconComponent
+      ],
       providers: [
         AppComponent,
         { provide: FormBuilder }
       ]
-    });
+    }).compileComponents();
     comp = TestBed.get(AppComponent);
   });
   describe('after init', () => {

@@ -7,7 +7,7 @@ import { faStar as starOff } from '@fortawesome/free-regular-svg-icons';
 @Component({
   selector: 'input-stars',
   template: `<ul class="input-stars__stars">
-  <li *ngFor="let star of stars; index as i" (click)="setValue(i)">
+  <li id="item-{{i}}-{{i + 1 <= value ? 'on' : 'off'}}" *ngFor="let star of stars; index as i" (click)="setValue(i)">
   <fa-icon [icon]="icons.star.on" *ngIf="i + 1 <= value"></fa-icon>
   <fa-icon [icon]="icons.star.off" *ngIf="i + 1 > value"></fa-icon></li>
   </ul>`,
@@ -31,9 +31,9 @@ export class InputStarsComponent implements OnInit, ControlValueAccessor {
   icons: any = {
     star: { on: starOn, off: starOff }
   }
-  stars: any[] = [];
   value: number = 0;
   maxValue: number = 0;
+  stars: any[] = [];
   @Input() max: string;
 
   onChange: any = () => { };
