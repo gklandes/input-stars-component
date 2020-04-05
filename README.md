@@ -18,7 +18,7 @@ A simple Angular Form element for capturing ratings. The element uses the same c
 ### Component
 Add the field to your Reactive or Template-based form as usual.
 ```javascript
-this.myForm = this.formBuilder.group({ null, [ Validators.required ] })
+this.myForm = this.formBuilder.group({ myStars: [null, [ Validators.required ]] })
 ```
 
 ### Template
