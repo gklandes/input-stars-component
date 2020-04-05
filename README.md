@@ -6,6 +6,8 @@ A simple Angular Form element for capturing ratings. The element uses the same c
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-x2xcby)
 
+![build status](https://travis-ci.com/gklandes/input-stars-component.svg?branch=master&status=failed "Travis CI Build Status")
+
 ## Implementation
 * Download the [input-stars-component](https://github.com/gklandes/input-stars-component/archive/master.zip) package and unzip
 * Locate `src/app/input-stars.component.ts` and copy into your project. (Styles and Template are inline, so no other files are needed.)
