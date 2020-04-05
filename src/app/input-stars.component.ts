@@ -6,8 +6,11 @@ import { faStar as starOff } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'input-stars',
-  template: `<ul class="input-stars__stars">
-  <li id="item-{{i}}-{{i + 1 <= value ? 'on' : 'off'}}" *ngFor="let star of stars; index as i" (click)="setValue(i)">
+  template: `<ul class="input-stars">
+  <li id="star-{{i}}"
+    class="input-stars__star input-stars__star--{{i + 1 <= value ? 'on' : 'off'}}"
+    *ngFor="let star of stars; index as i" (click)="setValue(i)"
+    >
   <fa-icon [icon]="icons.star.on" *ngIf="i + 1 <= value"></fa-icon>
   <fa-icon [icon]="icons.star.off" *ngIf="i + 1 > value"></fa-icon></li>
   </ul>`,
